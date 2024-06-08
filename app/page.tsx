@@ -37,7 +37,7 @@ export default function Home() {
   // };
   return (
     <Flex as="main" w="full" h="full">
-      Journal App
+      Journal App test gitignore
       {/* <Button onClick={addTodo}>Add data</Button> */}
     </Flex>
   );
