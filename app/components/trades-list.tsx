@@ -2,6 +2,7 @@
 import { Button, Flex, Input } from "@chakra-ui/react";
 import { ColumnDef } from "@tanstack/react-table";
 import { addDoc, collection } from "firebase/firestore";
+import { PlusSquare } from "lucide-react";
 import { useRouter } from "next/navigation";
 import React from "react";
 
@@ -42,7 +43,9 @@ export default function TradesList({ trades }: { trades: Trade[] }) {
         justifyContent="space-between"
       >
         <Input w="50%" />
-        <Button onClick={addTrade}>Add trade</Button>
+        <Button onClick={() => router.push(`/entry`)} leftIcon={<PlusSquare />}>
+          Add trade
+        </Button>
       </Flex>
 
       <Flex w="full" justifyContent="center" flex={1} py={6}>

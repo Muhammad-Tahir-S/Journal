@@ -1,17 +1,18 @@
 "use client";
+import { Button, ButtonProps, Icon } from "@chakra-ui/react";
+import { ArrowBigLeftDash } from "lucide-react";
 import { useRouter } from "next/navigation";
 
-function BackButton({
-  className,
-  children,
-}: React.PropsWithChildren<{
-  className?: string;
-}>) {
+function BackButton(props: Omit<ButtonProps, "onClick" | "role">) {
   const router = useRouter();
   return (
-    <button className={className} onClick={() => router.back()}>
-      {children}
-    </button>
+    <Button onClick={() => router.back()} role="group" {...props}>
+      <Icon
+        as={ArrowBigLeftDash}
+        boxSize="24px"
+        _groupHover={{ stroke: "blue" }}
+      />
+    </Button>
   );
 }
 
