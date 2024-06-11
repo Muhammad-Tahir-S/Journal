@@ -1,5 +1,6 @@
 import "./globals.css";
 
+import { Flex } from "@chakra-ui/react";
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 
@@ -20,7 +21,11 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={inter.className}>
-        <Providers>{children}</Providers>
+        <Providers>
+          <Flex as="main" w="full" h="full">
+            {children}
+          </Flex>
+        </Providers>
       </body>
     </html>
   );

@@ -1,4 +1,4 @@
-import { getAnalytics } from "firebase/analytics";
+// import { getAnalytics } from "firebase/analytics";
 import { initializeApp } from "firebase/app";
 import { getAuth } from "firebase/auth";
 import { getFirestore } from "firebase/firestore";
@@ -14,6 +14,6 @@ export const fbConfig = {
 };
 
 export const fbApp = initializeApp(fbConfig);
-export const fbAnalytics = getAnalytics(fbApp);
+// export const fbAnalytics = getAnalytics(fbApp);
 export const fbAuth = getAuth(fbApp);
 export const db = getFirestore(fbApp);

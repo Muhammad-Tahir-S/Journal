@@ -15,9 +15,3 @@ body {
   max-height: 100vh;
   overflow-y: hidden;
 }
-
-@media (prefers-color-scheme: dark) {
-  html {
-    color-scheme: dark;
-  }
-}
