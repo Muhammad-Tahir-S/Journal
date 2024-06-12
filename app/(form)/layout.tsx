@@ -1,7 +1,7 @@
 import { Flex } from "@chakra-ui/react";
 import { ReactNode } from "react";
 
-import BackButton from "../components/back-button";
+import BackButton from "../components/shared/back-button";
 
 export default function Layout({ children }: { children: ReactNode }) {
   return (
@@ -12,9 +12,8 @@ export default function Layout({ children }: { children: ReactNode }) {
         flex={1}
         w="65%"
         flexDir="column"
-        border="1px solid blue"
-        gap="12px"
-        p={3}
+        border="2px solid skyblue"
+        borderRadius="12px"
       >
         {children}
       </Flex>
