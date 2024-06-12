@@ -23,20 +23,25 @@ export default function Table<T>({
 
   return (
     <Box>
-      <Box h="fit-content" border="1px solid blue" borderRadius="8px" p={2}>
+      <Box h="fit-content" borderRadius="8px" p={2}>
         <Box as="table">
           <Box as="thead">
             {table.getHeaderGroups().map((headerGroup) => (
               <Box as="tr" key={headerGroup.id}>
-                {headerGroup.headers.map((header) => (
+                {headerGroup.headers.map((header, i) => (
                   <Box
                     as="th"
                     w="auto"
                     bg="blue.300"
+                    borderBottom="1px solid blue"
                     color="white"
                     py={1}
                     px={5}
                     key={header.id}
+                    borderTopLeftRadius={i === 0 ? "12px" : undefined}
+                    borderTopRightRadius={
+                      i === headerGroup.headers?.length - 1 ? "12px" : undefined
+                    }
                   >
                     {header.isPlaceholder
                       ? null
