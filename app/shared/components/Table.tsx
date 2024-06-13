@@ -5,7 +5,7 @@ import {
   getCoreRowModel,
   useReactTable,
 } from "@tanstack/react-table";
-import React from "react";
+
 export default function Table<T>({
   data,
   columns,
